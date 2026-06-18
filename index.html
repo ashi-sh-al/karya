@@ -1,131 +1,134 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>कार्य</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
 
-
-</head>
-
-<body class="min-h-screen bg-gray-100">
+  <body class="min-h-screen bg-gray-300">
     <header>
-        <nav>
-
-        </nav>
-    </header>
-    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
-
+      <nav>
         <!-- App Title -->
         <div class="text-center mb-6 sm:mb-8">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-purple-700">
-                कार्य
-            </h1>
-            <p class="text-sm sm:text-base text-gray-600 mt-2">
-                Organize your tasks efficiently
-            </p>
+          <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-bold text-purple-700"
+          >
+            कार्य
+          </h1>
+          <p class="text-sm sm:text-base text-gray-600 mt-2">
+            Organize your tasks efficiently
+          </p>
         </div>
+      </nav>
+    </header>
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+      <!-- Form Card -->
+      <div
+        class="w-full max-w-md sm:max-w-lg md:max-w-xl mx-auto bg-white rounded-2xl shadow-xl p-4 sm:p-6 md:p-8"
+      >
+        <h2 class="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-center">
+          Create New Task
+        </h2>
 
-        <!-- Form Card -->
-        <div class="w-full max-w-md sm:max-w-lg md:max-w-xl mx-auto bg-white rounded-2xl shadow-xl p-4 sm:p-6 md:p-8">
+        <form class="flex flex-col gap-4 sm:gap-5">
+          <!-- Title -->
+          <div>
+            <label class="block mb-1 font-medium text-gray-700">
+              Task Title
+            </label>
 
-            <h2 class="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-center">
-                Create New Task
-            </h2>
+            <input
+              type="text"
+              placeholder="Enter task title"
+              class="w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
+            />
+          </div>
 
-            <form class="flex flex-col gap-4 sm:gap-5">
+          <!-- Description -->
+          <div>
+            <label class="block mb-1 font-medium text-gray-700">
+              Task Description
+            </label>
 
-                <!-- Title -->
-                <div>
-                    <label class="block mb-1 font-medium text-gray-700">
-                        Task Title
-                    </label>
+            <textarea
+              rows="4"
+              placeholder="Describe your task..."
+              class="w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg resize-none focus:ring-2 focus:ring-purple-500 focus:outline-none"
+            ></textarea>
+          </div>
 
-                    <input type="text" placeholder="Enter task title"
-                        class="w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none">
-                </div>
+          <!-- Category -->
+          <div>
+            <label class="block mb-1 font-medium text-gray-700">
+              Category
+            </label>
 
-                <!-- Description -->
-                <div>
-                    <label class="block mb-1 font-medium text-gray-700">
-                        Task Description
-                    </label>
+            <select
+              class="w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
+            >
+              <option selected disabled>Select Category</option>
+              <option>Work</option>
+              <option>Personal</option>
+              <option>Study</option>
+              <option>Shopping</option>
+              <option>Finance</option>
+              <option>Other</option>
+            </select>
+          </div>
 
-                    <textarea rows="4" placeholder="Describe your task..."
-                        class="w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg resize-none focus:ring-2 focus:ring-purple-500 focus:outline-none"></textarea>
-                </div>
+          <!-- Priority -->
+          <div>
+            <label class="block mb-2 font-medium text-gray-700">
+              Priority
+            </label>
 
-                <!-- Category -->
-                <div>
-                    <label class="block mb-1 font-medium text-gray-700">
-                        Category
-                    </label>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3">
+              <label
+                class="flex items-center justify-center gap-2 border rounded-lg py-2 cursor-pointer hover:bg-blue-50"
+              >
+                <input type="radio" name="priority" class="accent-blue-500" />
+                <span class="text-blue-600 text-sm sm:text-base">Low</span>
+              </label>
 
-                    <select
-                        class="w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none">
-                        <option selected disabled>Select Category</option>
-                        <option>Work</option>
-                        <option>Personal</option>
-                        <option>Study</option>
-                        <option>Shopping</option>
-                        <option>Finance</option>
-                        <option>Other</option>
-                    </select>
-                </div>
+              <label
+                class="flex items-center justify-center gap-2 border rounded-lg py-2 cursor-pointer hover:bg-yellow-50"
+              >
+                <input type="radio" name="priority" class="accent-yellow-500" />
+                <span class="text-yellow-600 text-sm sm:text-base">Medium</span>
+              </label>
 
-                <!-- Priority -->
-                <div>
-                    <label class="block mb-2 font-medium text-gray-700">
-                        Priority
-                    </label>
+              <label
+                class="flex items-center justify-center gap-2 border rounded-lg py-2 cursor-pointer hover:bg-orange-50"
+              >
+                <input type="radio" name="priority" class="accent-orange-500" />
+                <span class="text-orange-600 text-sm sm:text-base">High</span>
+              </label>
 
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3">
+              <label
+                class="flex items-center justify-center gap-2 border rounded-lg py-2 cursor-pointer hover:bg-red-50"
+              >
+                <input type="radio" name="priority" class="accent-red-500" />
+                <span class="text-red-600 text-sm sm:text-base">Urgent</span>
+              </label>
+            </div>
+          </div>
 
-                        <label
-                            class="flex items-center justify-center gap-2 border rounded-lg py-2 cursor-pointer hover:bg-blue-50">
-                            <input type="radio" name="priority" class="accent-blue-500">
-                            <span class="text-blue-600 text-sm sm:text-base">Low</span>
-                        </label>
-
-                        <label
-                            class="flex items-center justify-center gap-2 border rounded-lg py-2 cursor-pointer hover:bg-yellow-50">
-                            <input type="radio" name="priority" class="accent-yellow-500">
-                            <span class="text-yellow-600 text-sm sm:text-base">Medium</span>
-                        </label>
-
-                        <label
-                            class="flex items-center justify-center gap-2 border rounded-lg py-2 cursor-pointer hover:bg-orange-50">
-                            <input type="radio" name="priority" class="accent-orange-500">
-                            <span class="text-orange-600 text-sm sm:text-base">High</span>
-                        </label>
-
-                        <label
-                            class="flex items-center justify-center gap-2 border rounded-lg py-2 cursor-pointer hover:bg-red-50">
-                            <input type="radio" name="priority" class="accent-red-500">
-                            <span class="text-red-600 text-sm sm:text-base">Urgent</span>
-                        </label>
-
-                    </div>
-                </div>
-
-                <!-- Submit -->
-                <button type="submit"
-                    class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2.5 sm:py-3 rounded-lg transition">
-                    Add Task
-                </button>
-
-            </form>
-
-        </div>
-
+          <!-- Submit -->
+          <button
+            type="submit"
+            class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2.5 sm:py-3 rounded-lg transition"
+          >
+            Add Task
+          </button>
+        </form>
+      </div>
     </main>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
