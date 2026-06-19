@@ -17,15 +17,6 @@
         <h1 class="text-3xl font-bold text-gray-900">कार्य नियोजक</h1>
         <p class="text-sm text-gray-600">Organize your tasks efficiently</p>
       </div>
-      <div>
-        <a href="./tasks.html"
-          ><button
-            class="border-none bg-gray-600 hover:bg-gray-950 text-white px-4 py-2 rounded-lg active:scale-95"
-          >
-            Tasks
-          </button></a
-        >
-      </div>
     </header>
 
     <!-- Main Content -->
@@ -45,6 +36,7 @@
               placeholder="Enter task title"
               class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-gray-500 focus:outline-none focus:border-none"
               id="task-title"
+              required
             />
           </div>
 
@@ -56,6 +48,7 @@
 
             <select
               class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-gray-500 focus:outline-none focus:border-none"
+              required
             >
               <option class="text-gray-700" selected disabled hidden>
                 Select Category
@@ -80,6 +73,7 @@
               placeholder="Describe your task..."
               class="w-full px-4 py-2 border rounded-lg resize-none focus:ring-2 focus:ring-gray-500 focus:outline-none focus:border-none"
               id="task-desc"
+              required
             ></textarea>
           </div>
 
@@ -93,28 +87,28 @@
               <label
                 class="flex items-center justify-center gap-2 rounded-lg py-2 cursor-pointer hover:bg-blue-50"
               >
-                <input type="radio" name="priority" class="accent-blue-500" />
+                <input type="radio" name="priority" value="Low" class="accent-blue-500" />
                 <span class="text-blue-600">Low</span>
               </label>
 
               <label
                 class="flex items-center justify-center gap-2 rounded-lg py-2 cursor-pointer hover:bg-yellow-50"
               >
-                <input type="radio" name="priority" class="accent-yellow-500" />
-                <span class="text-yellow-600">Medium</span>
+                <input type="radio" name="priority" value="Medium" class="accent-yellow-500" />
+                <span class="text-yellow-600 hover">Medium</span>
               </label>
 
               <label
                 class="flex items-center justify-center gap-2 rounded-lg py-2 cursor-pointer hover:bg-orange-50"
               >
-                <input type="radio" name="priority" class="accent-orange-500" />
+                <input type="radio" name="priority" value="High" class="accent-orange-500" />
                 <span class="text-orange-600">High</span>
               </label>
 
               <label
                 class="flex items-center justify-center gap-2 rounded-lg py-2 cursor-pointer hover:bg-red-50"
               >
-                <input type="radio" name="priority" class="accent-red-500" />
+                <input type="radio" name="priority" value="Urgent" class="accent-red-500" />
                 <span class="text-red-600">Urgent</span>
               </label>
             </div>
